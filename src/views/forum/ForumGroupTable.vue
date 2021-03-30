@@ -120,6 +120,7 @@ export default {
       this.$store.commit('forumGroup/setCurrentPage', pageNumber);
     },
     formatDate(date) {
+      if (!date) return '- - -';
       return [
         date.getDate(),
         `0${(date.getMonth() + 1)}`.substr(-2),
