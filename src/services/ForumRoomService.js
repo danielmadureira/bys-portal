@@ -35,15 +35,13 @@ class ForumRoomService {
       });
 
     } catch (error) {
-      let data = null;
-      let message = 'Houve um erro ao tentar salvar a sala';
-      if (error.data.errors) {
+      let data = [ 'Houve um erro ao tentar salvar o post' ];
+      if (Object.keys(error.data.errors).length) {
         data = Object.values(error.data.errors)
           .reduce((acc, error) => [ ...acc, ...error ]);
-        message = data[0];
       }
 
-      throw new DisplayableError(message, data);
+      throw new DisplayableError(data[0], data);
     }
   }
 
