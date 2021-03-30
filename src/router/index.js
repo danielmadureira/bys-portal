@@ -59,7 +59,7 @@ const routes = [
   {
     path: '/pages',
     redirect: '/pages/feed/post/',
-    name: 'Pages',
+    name: 'Home',
     component: TheContainer,
     children: [
       {
