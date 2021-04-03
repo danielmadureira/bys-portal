@@ -34,7 +34,10 @@ export default {
   },
   methods: {
     onEditorChange(event) {
-      this.$emit('text-changed', event.html);
+      this.$emit(
+        'text-changed',
+        `<div class="ql-container"><div class="ql-editor">${event.html}</div></div>`
+      );
     }
   }
 }
