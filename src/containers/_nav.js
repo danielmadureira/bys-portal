@@ -43,16 +43,10 @@ export default [
         ]
       },
       {
-        _name: 'CSidebarNavDropdown',
+        _name: 'CSidebarNavItem',
         name: 'Usuários',
-        route: '/pages/user',
-        icon: 'cil-user',
-        items: [
-          {
-            name: 'Usuários',
-            to: '/pages/user'
-          }
-        ]
+        to: '/pages/user',
+        icon: 'cil-user'
       }
     ]
   }
